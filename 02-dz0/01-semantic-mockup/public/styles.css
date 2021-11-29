@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+}
+
+header {
+    background: red;
+    color: white;
+    text-align: center;
+}
+
+header nav {
+    background: #fd9901;
+    padding: 5px;
+}
+
+header nav a {
+    color: white;
+}
+
+main {
+    background: green;
+    padding: 5px 5px 10px 5px;
+}
+
+.article {
+    background: blue;
+    color: white;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+footer {
+    background: #bc00fe;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
