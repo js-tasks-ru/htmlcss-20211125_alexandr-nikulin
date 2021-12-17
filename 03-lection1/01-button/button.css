@@ -1,1 +1,80 @@
 /* Стилизация кнопки */
+
+.button {
+    height: 48px;
+    width: 189px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+.button:active {
+    box-shadow: none;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button_primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.button_primary:hover {
+    background: var(--hover-primary);
+    transition: background 200ms ease-in;
+}
+
+.button_primary_hover {
+    background: var(--hover-primary);
+    transition: background 200ms ease-in-out;
+}
+
+.button_primary:active {
+    background: var(--hover-primary) radial-gradient(var(--hover-primary), var(--active-primary));
+}
+
+.button_secondary {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.button_secondary:hover {
+    background: var(--hover-secondary);
+    transition: background 200ms ease-in-out;
+}
+
+.button_secondary_hover {
+    background: var(--hover-secondary);
+    transition: background 200ms ease-in-out;
+}
+
+.button_secondary:active {
+    background: var(--hover-secondary) radial-gradient(var(--hover-secondary), var(--active-secondary));
+}
+
+.button_alternate {
+    background: var(--white);
+    color: var(--grey-4);
+    border: 1px solid var(--grey-3);
+}
+
+.button_alternate:hover {
+    border: 1px solid var(--grey-4);
+    transition: opacity 200ms ease-in-out, border 200ms ease-in-out;
+}
+
+.button_alternate_hover {
+    border: 1px solid var(--grey-4);
+    transition: opacity 200ms ease-in-out, border 200ms ease-in-out;
+}
+
+.button_alternate:active {
+    background: var(--white) radial-gradient(var(--white), var(--grey-1));
+}
