@@ -1,10 +1,9 @@
 /* Стилизация аккордеона */
 
 .accordion__item {
-    border: 1px solid #ACB5BD;
+    border: 1px solid var(--grey-3);
     border-radius: 8px;
     margin: 0 0 8px 0;
-    --accordion-left-rigth-margin: 32px;
 }
 
 .accordion__item:last-child {
@@ -12,8 +11,8 @@
 }
 
 .accordion__summary {
-    display: inline;
-    margin: 24px var(--accordion-left-rigth-margin) 24px var(--accordion-left-rigth-margin);
+    display: block;
+    margin: 24px 32px 24px 32px;
     list-style: none;
 
     font-family: Inter, serif;
@@ -32,12 +31,16 @@
     cursor: pointer;
 }
 
+.accordion__item[open] .accordion__summary {
+    margin-bottom: 0;
+}
+
 .accordion__summary::-webkit-details-marker {
     display: none;
 }
 
 .accordion__details {
-    margin: -8px var(--accordion-left-rigth-margin) 32px var(--accordion-left-rigth-margin);
+    margin: 16px 32px 32px 32px;
     font-family: Inter, serif;
     font-style: normal;
     font-weight: normal;
