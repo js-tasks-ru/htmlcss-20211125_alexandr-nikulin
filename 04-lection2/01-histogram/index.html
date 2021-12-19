@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <!-- Страница с гистограммой -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./histogram.css">
-    </head>
-    <body>
+<head>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./histogram.css">
+    <title>Histogram</title>
+    <script src="Histogram.js"></script>
+</head>
 
-    </body>
+<style>
+    .container__example {
+        width: 354px;
+        height: 185px;
+        display: grid;
+        gap: 10px;
+    }
+</style>
+
+<body>
+
+<div class="container__example">
+    <div class="histogram__example-1"></div>
+
+    <div class="histogram__example-2">
+        <div class="histogram">
+            <div class="histogram__header-total-info">
+                <div>Total orders</div>
+                <div class="histogram__header-total-info-count">10</div>
+            </div>
+            <div class="histogram__header-view-link">
+                <a href="#">View all</a>
+            </div>
+            <div class="histogram__data">
+                <div class="histogram__data-column">
+                    <div style="height: 10%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 20%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 30%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 40%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 50%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 60%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 70%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 80%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 90%"></div>
+                </div>
+                <div class="histogram__data-column">
+                    <div style="height: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script defer>
+
+    let renderHistogram = () => {
+        new Histogram({
+            element: document.querySelector('[class="histogram__example-1"]'),
+            data: Array.from({length: Math.floor(Math.random() * 100)}, () => Math.floor(Math.random() * 100))
+        }).render();
+    };
+
+    renderHistogram();
+    setInterval(renderHistogram, 3000, 0)
+
+</script>
+
+</body>
 </html>
