@@ -1,7 +1,5 @@
 .histogram {
-    min-width: 354px;
-    min-height: 185px;
-
+    height: 100%;
     padding: 16px 24px 16px 24px;
     background: var(--white);
     border: 1px solid var(--grey-2);
@@ -15,10 +13,11 @@
 
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
             "header-total-info header-view-link"
             "data data";
+    align-items: start;
     box-sizing: border-box;
 }
 
@@ -29,9 +28,6 @@
 .histogram__header-view-link {
     grid-area: header-view-link;
     justify-self: end;
-}
-
-.histogram__header-view-link > a {
     text-decoration: none;
     color: var(--blue);
 }
@@ -46,16 +42,19 @@
 .histogram__data {
     grid-area: data;
     display: flex;
-    column-gap: 2px;
+    column-gap: 1px;
+    align-items: end;
+    height: 100%;
 }
 
 .histogram__data-column {
     display: flex;
     flex-grow: 1;
-    align-items: end;
-}
-
-.histogram__data-column > div {
     background: var(--blue);
     width: 100%;
 }
+
+.histogram__data-column:hover {
+    background: var(--dark-blue);
+}
+

@@ -14,14 +14,10 @@ class Histogram {
         <div>Total orders</div>
         <div class="histogram__header-total-info-count">${this._total}</div>
     </div>
-    <div class="histogram__header-view-link">
-        <a href="#">View all</a>
-       </div>
+    <a class="histogram__header-view-link" href="#">View all</a>
     <div class="histogram__data">
         ${Array.from(this._data).map(it => {
-                return `<div class="histogram__data-column">
-                    <div style="height: ${it}%"></div>
-                </div>`
+                return `<div class="histogram__data-column" style="height: ${it}%"></div>`
             }).join('')}
     </div>
 </div>

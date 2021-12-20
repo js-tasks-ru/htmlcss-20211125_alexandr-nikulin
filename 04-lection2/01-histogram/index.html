@@ -9,11 +9,9 @@
 </head>
 
 <style>
-    .container__example {
+    .container__example > div {
         width: 354px;
-        height: 185px;
-        display: grid;
-        gap: 10px;
+        margin-bottom: 10px;
     }
 </style>
 
@@ -28,40 +26,10 @@
                 <div>Total orders</div>
                 <div class="histogram__header-total-info-count">10</div>
             </div>
-            <div class="histogram__header-view-link">
-                <a href="#">View all</a>
-            </div>
+            <a class="histogram__header-view-link" href="#">View all</a>
             <div class="histogram__data">
-                <div class="histogram__data-column">
-                    <div style="height: 10%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 20%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 30%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 40%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 50%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 60%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 70%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 80%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 90%"></div>
-                </div>
-                <div class="histogram__data-column">
-                    <div style="height: 100%"></div>
-                </div>
+                <div class="histogram__data-column" style="height: 20%"></div>
+                <div class="histogram__data-column" style="height: 100%"></div>
             </div>
         </div>
     </div>
