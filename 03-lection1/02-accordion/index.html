@@ -4,15 +4,41 @@
 <head>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="./accordion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>accordion</title>
 </head>
+
+<style>
+    section {
+        width: 400px;
+    }
+</style>
+
 <body>
-<details>
-    <summary>
-        Accordion item
-    </summary>
-    <p>
-        Hidden content
-    </p>
-</details>
+
+<section>
+    <div class="accordion">
+        <details class="accordion__item">
+            <summary class="accordion__summary">
+                Accordion item 1
+            </summary>
+            <div class="accordion__details">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+                velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            </div>
+        </details>
+        <details class="accordion__item">
+            <summary class="accordion__summary">
+                Accordion item 2
+            </summary>
+            <p class="accordion__details">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+                velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            </p>
+        </details>
+    </div>
+</section>
+
 </body>
 </html>
